@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	
+    <title>TTT_2021</title>
+
+    <script src="sketch.js"></script>
+    <script src="logo.js"></script>
+    <script src="stuff.js"></script>
+    <script src="line.js"></script>
+    <script src="check.js"></script> 	
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+  
+  <body id="bod1" onkeydown="keyHit_a()">
+  <input type="button" id="start" value="start" onclick="start()"></p>
+  <div id="div1">
+<p id="directpar"> Welcome to TICTACTOE pet style! To start the game press the start button and then decide who wants to be a kitten and who wants to be a puppy. The first one to get their pet three in a row, wins!
+  <p id="par1"> Block 1
+  <img id="img11" src="start.jpeg" width="90" height="90">
+  <img id="img12" src="babykitten.jpeg" width="0" height="0">
+  <img id="img13" src="puppy.jpeg" width="0" height="0">  </p>
+  
+  <p id="par2"> Block 2
+  <img id="img21" src="start.jpeg" width="90" height="90">
+  <img id="img22" src="babykitten.jpeg" width="0" height="0">
+  <img id="img23" src="puppy.jpeg" width="0" height="0">  </p>
+  
+  <p id="par3"> Block 3
+  <img id="img31" src="start.jpeg" width="90" height="90">
+  <img id="img32" src="babykitten.jpeg" width="0" height="0">
+  <img id="img33" src="puppy.jpeg" width="0" height="0">  </p>
+
+  
+  <p id="par4"> Block 4
+  <img id="img41" src="start.jpeg" width="90" height="90">
+  <img id="img42" src="babykitten.jpeg" width="0" height="0">
+  <img id="img43" src="puppy.jpeg" width="0" height="0">  </p>
+  
+  <p id="par5"> Block 5
+  <img id="img51" src="start.jpeg" width="90" height="90">
+  <img id="img52" src="babykitten.jpeg" width="0" height="0">
+  <img id="img53" src="puppy.jpeg" width="0" height="0">  </p>
+  
+  <p id="par6"> Block 6
+  <img id="img61" src="start.jpeg" width="90" height="90">
+  <img id="img62" src="babykitten.jpeg" width="0" height="0">
+  <img id="img63" src="puppy.jpeg" width="0" height="0">  </p>
+  
+  <p id="par7"> Block 7
+  <img id="img71" src="start.jpeg" width="90" height="90">
+  <img id="img72" src="babykitten.jpeg" width="0" height="0">
+  <img id="img73" src="puppy.jpeg" width="0" height="0">  
+  </p>
+  
+  <p id="par8"> Block 8
+  <img id="img81" src="start.jpeg" width="90" height="90">
+  <img id="img82" src="babykitten.jpeg" width="0" height="0">
+  <img id="img83" src="puppy.jpeg" width="0" height="0">  </p>
+  
+  <p id="par9"> Block 9
+  <img id="img91" src="start.jpeg" width="90" height="90">
+  <img id="img92" src="babykitten.jpeg" width="0" height="0">
+  <img id="img93" src="puppy.jpeg" width="0" height="0">  
+  </p>
+  
+  </div>
+  
+  <div id="div2">
+  
+  <input type="button" id="but12"  value="Kitten 1"" onclick="chgtoPic12(6)">
+  <input type="button" id="but13"  value="Puppy 1" onclick="chgtoPic13()">
+  <input type="button" id="but22"  value="Kitten 2" onclick="chgtoPic22(6)">
+  <input type="button" id="but23"  value="Puppy 2" onclick="chgtoPic23()">
+  <input type="button" id="but32"  value="Kitten 3" onclick="chgtoPic32(6)">
+  <input type="button" id="but33"  value="Puppy 3" onclick="chgtoPic33()">
+
+  <input type="button" id="but42"  value="Kitten 4" onclick="chgtoPic42(6)">
+  <input type="button" id="but43"  value="Puppy 4" onclick="chgtoPic43()">
+  <input type="button" id="but52"  value="Kitten 5" onclick="chgtoPic52(6)">
+  <input type="button" id="but53"  value="Puppy 5" onclick="chgtoPic53()">
+  <input type="button" id="but62"  value="Kitten 6" onclick="chgtoPic62(6)">
+  <input type="button" id="but63"  value="Puppy 6" onclick="chgtoPic63()">
+
+  <input type="button" id="but72"  value="Kitten 7" onclick="chgtoPic72(6)">
+  <input type="button" id="but73"  value="Puppy 7" onclick="chgtoPic73()">
+  <input type="button" id="but82"  value="Kitten 8" onclick="chgtoPic82(6)">
+  <input type="button" id="but83"  value="Puppy 8" onclick="chgtoPic83()">
+  <input type="button" id="but92"  value="Kitten 9" onclick="chgtoPic92(6)">
+  <input type="button" id="but93"  value="Puppy 9" onclick="chgtoPic93()">
+  <p id="demo">just playing</p>
+  </div>
+    
+</body>
+
+<script>let cell=[];
+let pic=[];
+for(let j=0;j<10;j++){pic[j]=[];}
+let pic11=document.getElementById("img11");
+let pic12=document.getElementById("img12");
+let pic13=document.getElementById("img13");
+let pic21=document.getElementById("img21");
+let pic22=document.getElementById("img22");
+let pic23=document.getElementById("img23");
+let pic31=document.getElementById("img31");
+let pic32=document.getElementById("img32");
+let pic33=document.getElementById("img33");
+
+let pic41=document.getElementById("img41");
+let pic42=document.getElementById("img42");
+let pic43=document.getElementById("img43");
+let pic51=document.getElementById("img51");
+let pic52=document.getElementById("img52");
+let pic53=document.getElementById("img53");
+let pic61=document.getElementById("img61");
+let pic62=document.getElementById("img62");
+let pic63=document.getElementById("img63");
+
+let pic71=document.getElementById("img71");
+let pic72=document.getElementById("img72");
+let pic73=document.getElementById("img73");
+let pic81=document.getElementById("img81");
+let pic82=document.getElementById("img82");
+let pic83=document.getElementById("img83");
+let pic91=document.getElementById("img91");
+let pic92=document.getElementById("img92");
+let pic93=document.getElementById("img93");
+
+let test=document.getElementById("but12");
+let cnt=0;
+</script>
+ 
+
+</html>
